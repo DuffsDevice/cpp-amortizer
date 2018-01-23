@@ -98,37 +98,6 @@ public:
 	template<typename OutputIterator>
 	OutputIterator apply( OutputIterator dest ) const
 	{
-		// std::vector<double> itm_times; // Vector to store intermediate amortization values
-		// size_t	num_prev_times = 0;
-		// IterFn	iter_fn = t_fn_begin;
-		// for( ; iter_fn != t_fn_end ; num_prev_times++ )
-		// {
-			// // Cache current time
-			// double cur_time = ;
-			
-			// // Sum up the times of all runs before and including the current time
-			// double sigma_time = cur_time;
-			// for( int i = 0 ; i < num_prev_times ; i++ )
-				// sigma_time += itm_times[i];
-			
-			// // Determine average time per run
-			// double avg_time = sigma_time / ( num_prev_times + 1 );
-			
-			// // If average time is higher, don't try to amortize this run
-			// if( avg_time >= time ){
-				// itm_times.push_back(time);
-				// *dest++ = avg_time; // Output current amortization level
-				// continue;
-			// }
-			
-			// // Set all previous intermediate values to the average time
-			// for( int i = 0 ; i < num_prev_times ; i++ )
-				// itm_times[i] = avg_time;
-			
-			// itm_times.push_back(avg_time); // Push the amortized value into the array of values
-			// *dest++ = time; // Output amortized time value
-		// }
-		
 		int		num_summands = 0;
 		double	sigma = 0;
 		IterFn	iter_fn = t_fn_begin;
